@@ -1196,22 +1196,23 @@ em {
 }
 
 .team__stat-badge {
-  background: var(--sage);
-  color: var(--white);
+  background: linear-gradient(135deg, #189EB7, #1189A3);
+  color: #ffffff;
   font-family: var(--font-head);
   font-size: 0.8125rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 5px 12px;
+  padding: 7px 16px;
   border-radius: 100px;
   white-space: nowrap;
   flex-shrink: 0;
+  box-shadow: 0 0 16px rgba(24, 158, 183, 0.5);
 }
 
 .team__stat p {
   font-size: 0.9375rem;
-  color: var(--charcoal);
+  color: rgba(203, 215, 221, 0.85);
   line-height: 1.5;
 }
 
@@ -1856,4 +1857,106 @@ em {
 /* Services section subtle gradient */
 .services {
   background: linear-gradient(180deg, #EEF5F8 0%, #F8F8F7 100%) !important;
+}
+
+/* ===========================================
+   EXTRA ANIMATIONS
+   =========================================== */
+
+/* Hero content fade-up on load */
+.hero__content > * {
+  opacity: 0;
+  animation: heroFadeUp 0.8s var(--ease) forwards;
+}
+.hero__content > *:nth-child(1) { animation-delay: 0.1s; }
+.hero__content > *:nth-child(2) { animation-delay: 0.25s; }
+.hero__content > *:nth-child(3) { animation-delay: 0.4s; }
+.hero__content > *:nth-child(4) { animation-delay: 0.55s; }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Team stat badge pulse glow */
+.team__stat-badge {
+  animation: badgePulse 3s ease-in-out infinite;
+}
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(24, 158, 183, 0.45); }
+  50%       { box-shadow: 0 0 28px rgba(24, 158, 183, 0.85); }
+}
+
+/* Why card number count-up shimmer */
+.why__num {
+  position: relative;
+}
+
+/* Animated gradient border on team cards */
+.team__card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(24,158,183,0.4), rgba(1,24,63,0), rgba(24,158,183,0.4));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+  pointer-events: none;
+}
+.team__card:hover::before { opacity: 1; }
+
+/* Service card icon spin on hover */
+.service-card:hover .service-card__icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+.service-card__icon {
+  transition: transform 0.3s var(--ease);
+}
+
+/* Nav links slide underline */
+.nav__links a::after {
+  height: 2px;
+  background: linear-gradient(90deg, #189EB7, #1189A3);
+  border-radius: 2px;
+}
+
+/* FAQ hover highlight */
+.faq__item {
+  transition: background 0.2s var(--ease);
+}
+.faq__q:hover {
+  color: #189EB7;
+}
+
+/* Modal shimmer on open */
+.modal__box {
+  animation: modalPop 0.35s var(--ease);
+}
+@keyframes modalPop {
+  from { opacity: 0; transform: scale(0.94) translateY(12px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Chip hover glow */
+.chip-label:hover span {
+  border-color: #189EB7;
+  box-shadow: 0 0 10px rgba(24, 158, 183, 0.2);
+}
+
+/* Footer brand logo subtle glow */
+.footer__logo {
+  transition: color 0.3s;
+}
+.footer__logo:hover {
+  color: #189EB7;
+}
+
+/* Scroll-to-top smooth indicator on nav */
+.nav.scrolled .nav__logo-img {
+  filter: drop-shadow(0 0 6px rgba(24, 158, 183, 0.3));
 }
