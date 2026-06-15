@@ -1,4 +1,19 @@
 /* ===========================================
+   BOOK PRELOADER
+   =========================================== */
+
+const bkPreloader = document.getElementById('bk-preloader');
+const bkEl        = document.getElementById('bk');
+const bkBrand     = document.getElementById('bk-brand');
+
+if (bkPreloader && bkEl) {
+  setTimeout(() => bkEl.classList.add('open'),    350);
+  setTimeout(() => bkBrand.classList.add('show'), 1050);
+  setTimeout(() => bkPreloader.classList.add('hide'), 2300);
+  setTimeout(() => bkPreloader.remove(), 2900);
+}
+
+/* ===========================================
    NAV — scrolled state
    =========================================== */
 
@@ -228,7 +243,7 @@ const revealObserver = new IntersectionObserver(
   { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
 );
 
-document.querySelectorAll('.why__card, .service-card, .sr-card, .faq__item, .hiw__step').forEach((el, i) => {
+document.querySelectorAll('.why__card, .service-card, .sr-card, .faq__item, .hiw__step, .help-if__item').forEach((el, i) => {
   el.classList.add('reveal');
   el.style.transitionDelay = `${(i % 4) * 55}ms`;
   revealObserver.observe(el);
@@ -247,18 +262,6 @@ window.addEventListener('scroll', () => {
   scrollBar.style.width = pct + '%';
 }, { passive: true });
 
-/* ===========================================
-   PARALLAX HERO BLOBS
-   =========================================== */
-
-const blob1 = document.querySelector('.hero__blob--1');
-const blob2 = document.querySelector('.hero__blob--2');
-
-window.addEventListener('scroll', () => {
-  const y = window.scrollY;
-  if (blob1) blob1.style.transform = `translate(0, ${y * 0.25}px) scale(1)`;
-  if (blob2) blob2.style.transform = `translate(0, ${y * -0.15}px) scale(1)`;
-}, { passive: true });
 
 /* ===========================================
    SVG PATH DRAW ON SCROLL

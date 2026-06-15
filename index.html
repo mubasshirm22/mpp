@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MedPathPrep: Premed Advising &amp; MCAT Tutoring</title>
-  <meta name="description" content="Student-run MCAT tutoring and premed advising. Real advice from med students who just went through it." />
+  <meta name="description" content="Student-run MCAT tutoring and premed advising. Real advice from people who just went through the premed process." />
   <meta property="og:title" content="MedPathPrep: Premed Advising &amp; MCAT Tutoring" />
   <meta property="og:description" content="Student-run MCAT tutoring and premed advising. Real advice from people who just got in." />
   <meta property="og:type" content="website" />
@@ -14,6 +14,30 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+
+  <!-- ========== BOOK PRELOADER ========== -->
+  <div class="bk-preloader" id="bk-preloader" aria-hidden="true">
+    <div class="bk-scene">
+      <div class="bk" id="bk">
+        <div class="bk__half bk__half--l">
+          <div class="bk__face bk__face--front">
+            <span class="bk__deco bk__deco--1"></span>
+            <span class="bk__deco bk__deco--2"></span>
+          </div>
+          <div class="bk__face bk__face--back"></div>
+        </div>
+        <div class="bk__half bk__half--r">
+          <div class="bk__face bk__face--front"></div>
+          <div class="bk__face bk__face--back"></div>
+        </div>
+        <div class="bk__spine"></div>
+      </div>
+    </div>
+    <div class="bk-brand" id="bk-brand">
+      <p class="bk-brand__name">MedPathPrep</p>
+      <p class="bk-brand__sub">Premed Advising &amp; MCAT Tutoring</p>
+    </div>
+  </div>
 
   <!-- Scroll progress bar -->
   <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
@@ -30,7 +54,7 @@
         <a href="#about">About</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <button class="btn btn--sm btn--primary nav__cta js-open-booking">Book a Consult</button>
+      <button class="btn btn--sm btn--primary nav__cta js-open-booking">Free 20-Min Consult</button>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -39,7 +63,7 @@
       <a href="#services">Services</a>
       <a href="#about">About</a>
       <a href="#faq">FAQ</a>
-      <button class="btn btn--primary btn--full js-open-booking">Book a Free Consult</button>
+      <button class="btn btn--primary btn--full js-open-booking">Get a Free 20-Min Consult</button>
     </div>
   </header>
 
@@ -47,36 +71,39 @@
 
     <!-- ========== HERO ========== -->
     <section class="hero">
-      <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
-      <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
       <div class="hero__particles" aria-hidden="true">
-        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
-        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
-        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
-        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+        <span class="particle">PV=nRT</span>
+        <span class="particle">ΔG</span>
+        <span class="particle">pH</span>
+        <span class="particle">F=ma</span>
+        <span class="particle">ATP</span>
+        <span class="particle">Km</span>
+        <span class="particle">CARS</span>
+        <span class="particle">DNA</span>
+        <span class="particle">E=hf</span>
+        <span class="particle">Ka</span>
+        <span class="particle">mRNA</span>
+        <span class="particle">520</span>
       </div>
       <div class="container hero__inner">
         <div class="hero__content">
-          <h1 class="hero__h1">Real premed advice and tutoring<br />from students who recently went through it.</h1>
-          <p class="hero__sub">Student-run MCAT tutoring and premed advising, by med students who just did it.</p>
+          <h1 class="hero__h1">We just went through the MCAT, essays, and secondaries.<br />Let us help.</h1>
+          <p class="hero__sub">Affordable MCAT tutoring and premed advising from current med students and recent premeds.</p>
           <div class="hero__ctas">
-            <button class="btn btn--primary btn--lg js-open-booking">Book a Free Consult</button>
+            <button class="btn btn--primary btn--lg js-open-booking">Get a Free 20-Min Consult</button>
             <a href="#services" class="btn btn--ghost btn--lg">See Services</a>
           </div>
           <p class="hero__price">Starting at <strong>$30/hr</strong> &nbsp;&middot;&nbsp; Free 20-min consult to start</p>
         </div>
         <div class="hero__visual" aria-hidden="true">
           <div class="hero__card hero__card--1">
-            <span class="hero__card-dot"></span>
             <span class="hero__card-label">MCAT Prep</span>
           </div>
           <div class="hero__card hero__card--2">
-            <span class="hero__card-dot"></span>
             <span class="hero__card-label">Personal Statement</span>
           </div>
           <div class="hero__card hero__card--3">
-            <span class="hero__card-dot"></span>
-            <span class="hero__card-label">General Premed Advising</span>
+            <span class="hero__card-label">Premed Advising</span>
           </div>
         </div>
       </div>
@@ -87,6 +114,21 @@
       </div>
     </section>
 
+    <!-- ========== BOOK ACCENT ========== -->
+    <div class="book-accent" aria-hidden="true">
+      <div class="book-accent__wrap">
+        <div class="book-accent__page book-accent__page--l">
+          <span></span><span></span><span class="s"></span><span></span><span class="s"></span>
+        </div>
+        <div class="book-accent__spine"></div>
+        <div class="book-accent__page book-accent__page--r">
+          <span></span><span class="s"></span><span></span><span></span><span class="s"></span>
+          <div class="book-accent__corner"></div>
+        </div>
+        <div class="book-accent__shadow"></div>
+      </div>
+    </div>
+
     <!-- ========== WHY ========== -->
     <section class="section why" id="about">
       <div class="container">
@@ -96,23 +138,23 @@
         <div class="why__grid">
           <div class="why__card">
             <div class="why__num">01</div>
-            <h3>We just did this</h3>
-            <p>Current med students who went through the same process, not textbook tutors.</p>
+            <h3>We're not career consultants</h3>
+            <p>We're recent grads who just went through the applications, MCAT, and interviews, and figured out what actually mattered.</p>
           </div>
           <div class="why__card">
             <div class="why__num">02</div>
-            <h3>Proven track record</h3>
-            <p>Cumulatively tutored 50+ students privately, written essays, built school lists, and gotten accepted to competitive research programs and medical school.</p>
+            <h3>Affordable on purpose</h3>
+            <p>Most MCAT and advising help is weirdly expensive. We're trying to keep this accessible. Starting at $30/hr, one-on-one, no group sessions.</p>
           </div>
           <div class="why__card">
             <div class="why__num">03</div>
-            <h3>$30/hr vs. $100+/hr</h3>
-            <p>Competitors like Kaplan and MedSchoolCoach start at $100+/hr and often put you in group sessions. We're one-on-one and start at $30/hr.</p>
+            <h3>Help that feels specific</h3>
+            <p>Bring your essay, school list, MCAT schedule, or confusing situation. We'll work through it with you.</p>
           </div>
           <div class="why__card">
             <div class="why__num">04</div>
-            <h3>Individualized tutoring</h3>
-            <p>One-on-one sessions built around you, not group classes or generic advice.</p>
+            <h3>No fake guarantees</h3>
+            <p>We won't promise a 520 or a perfect application. We'll give honest, practical help. That said, we've tutored 50+ students, written successful applications, and gotten into medical school ourselves.</p>
           </div>
         </div>
       </div>
@@ -240,7 +282,7 @@
         </div>
         <div class="team__stat">
           <span class="team__stat-badge">98th percentile</span>
-          <p>Together, our founders have scored in the 98th percentile or higher on every section of the MCAT, been accepted to competitive research programs, and are now in medical school.</p>
+          <p>Together, our founders have scored in the 98th percentile or higher on every section of the MCAT, been accepted to competitive research programs, and have been accepted to medical school.</p>
         </div>
         <div class="team__grid">
 
@@ -289,7 +331,7 @@
       <div class="container consult__inner">
         <h2>Getting started is simple.</h2>
         <p>Fill out a quick form and we'll reach out within 24 hours.</p>
-        <button class="btn btn--primary btn--lg js-open-booking">Book Your Free Consult</button>
+        <button class="btn btn--primary btn--lg js-open-booking">Get a Free 20-Min Consult</button>
         <p class="consult__resp">We respond within 24 hours.</p>
       </div>
     </section>
@@ -304,11 +346,11 @@
 
           <div class="faq__item" role="listitem">
             <button class="faq__q" aria-expanded="false">
-              Are you actually med students?
+              Are you actually people who've done this?
               <span class="faq__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
             </button>
             <div class="faq__a"><div class="faq__a-inner">
-              <p>Yes. Everyone at MedPathPrep is a current medical student or recent premed. We're not professional tutors. We did this recently.</p>
+              <p>Yes. We're recent undergrad grads who just went through the MCAT, applications, and interviews. We got into medical school. We're not career consultants or professional tutors. We did this recently and remember what it's actually like.</p>
             </div></div>
           </div>
 
@@ -378,7 +420,7 @@
               <span class="faq__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
             </button>
             <div class="faq__a"><div class="faq__a-inner">
-              <p>Hit the "Book a Free Consult" button anywhere on this page. We respond within 24 hours.</p>
+              <p>Hit the "Get a Free 20-Min Consult" button anywhere on this page. We respond within 24 hours.</p>
             </div></div>
           </div>
 
@@ -391,7 +433,7 @@
       <div class="container cta-final__inner">
         <h2>Ready to get some actual help?</h2>
         <p>Book a free 20-minute consult. No pitch.</p>
-        <button class="btn btn--gold btn--lg js-open-booking">Book Your Free Consultation</button>
+        <button class="btn btn--gold btn--lg js-open-booking">Get a Free 20-Min Consult</button>
         <p class="cta-final__email">Or email us at <a href="mailto:hello@medpathprep.com">hello@medpathprep.com</a></p>
       </div>
     </section>
@@ -442,7 +484,7 @@
 
         <form
           id="booking-form"
-          action="https://formspree.io/f/YOUR_FORM_ID"
+          action="https://formspree.io/f/mqeonjry"
           method="POST"
           novalidate
         >
