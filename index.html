@@ -15,6 +15,9 @@
 </head>
 <body>
 
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
   <!-- ========== NAV ========== -->
   <header class="nav" id="nav">
     <div class="nav__inner container">
@@ -46,6 +49,12 @@
     <section class="hero">
       <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
       <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+      <div class="hero__particles" aria-hidden="true">
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+      </div>
       <div class="container hero__inner">
         <div class="hero__content">
           <h1 class="hero__h1">Real premed advice and tutoring<br />from students who recently went through it.</h1>
@@ -70,6 +79,11 @@
             <span class="hero__card-label">General Premed Advising</span>
           </div>
         </div>
+      </div>
+      <div class="hero__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 64" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,32 C360,64 1080,0 1440,32 L1440,64 L0,64 Z" fill="#F8F8F7"/>
+        </svg>
       </div>
     </section>
 
@@ -186,6 +200,11 @@
           <h2>How it works</h2>
           <p class="section-sub">Simple, personal, no fluff.</p>
         </div>
+        <div class="hiw__path-wrap" aria-hidden="true">
+          <svg class="hiw__path-svg" viewBox="0 0 900 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path id="hiw-path" d="M 50 30 C 150 10, 250 50, 350 30 C 450 10, 550 50, 650 30 C 750 10, 820 40, 860 30" stroke="#189EB7" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
         <div class="hiw__grid">
           <div class="hiw__step">
             <div class="hiw__num">1</div>
@@ -233,7 +252,7 @@
               <h3 class="team__name">Mubasshir</h3>
               <p class="team__role">Co-founder</p>
               <p class="team__degree">B.S. Computer Science &amp; Biology</p>
-              <p class="team__score">98th percentile CARS &middot; 98th percentile P/S</p>
+              <p class="team__score"><span data-count="98" data-suffix="th">98th</span> percentile CARS &middot; <span data-count="98" data-suffix="th">98th</span> percentile P/S</p>
             </div>
           </div>
 
@@ -245,7 +264,7 @@
               <h3 class="team__name">Shayaan</h3>
               <p class="team__role">Co-founder</p>
               <p class="team__degree">B.S. Biology</p>
-              <p class="team__score">99th percentile P/S &middot; 99th percentile C/P</p>
+              <p class="team__score"><span data-count="99" data-suffix="th">99th</span> percentile P/S &middot; <span data-count="99" data-suffix="th">99th</span> percentile C/P</p>
             </div>
           </div>
 
@@ -257,7 +276,7 @@
               <h3 class="team__name">Raiyan</h3>
               <p class="team__role">Co-founder</p>
               <p class="team__degree">B.S. Biology</p>
-              <p class="team__score">99th percentile C/P &middot; 100th percentile B/B</p>
+              <p class="team__score"><span data-count="99" data-suffix="th">99th</span> percentile C/P &middot; <span data-count="100" data-suffix="th">100th</span> percentile B/B</p>
             </div>
           </div>
 

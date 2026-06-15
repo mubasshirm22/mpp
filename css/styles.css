@@ -2156,3 +2156,115 @@ em {
   }
   .hiw__step { width: 100%; }
 }
+
+/* ===========================================
+   SCROLL PROGRESS BAR
+   =========================================== */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #189EB7, #4ECFD8, #189EB7);
+  background-size: 200% 100%;
+  z-index: 9999;
+  transition: width 0.1s linear;
+  animation: progressShimmer 2s linear infinite;
+}
+
+@keyframes progressShimmer {
+  0%   { background-position: 0% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ===========================================
+   HERO PARTICLES
+   =========================================== */
+
+.hero__particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(24, 158, 183, 0.55);
+  animation: particleRise linear infinite;
+}
+
+.particle:nth-child(1)  { left: 8%;  animation-duration: 9s;  animation-delay: 0s;    width: 3px; height: 3px; }
+.particle:nth-child(2)  { left: 18%; animation-duration: 12s; animation-delay: 1.5s;  width: 5px; height: 5px; opacity: 0.4; }
+.particle:nth-child(3)  { left: 28%; animation-duration: 8s;  animation-delay: 3s;    width: 3px; height: 3px; }
+.particle:nth-child(4)  { left: 38%; animation-duration: 14s; animation-delay: 0.7s;  width: 4px; height: 4px; opacity: 0.3; }
+.particle:nth-child(5)  { left: 52%; animation-duration: 10s; animation-delay: 2s;    width: 3px; height: 3px; }
+.particle:nth-child(6)  { left: 62%; animation-duration: 7s;  animation-delay: 4s;    width: 5px; height: 5px; opacity: 0.35; }
+.particle:nth-child(7)  { left: 72%; animation-duration: 11s; animation-delay: 1s;    width: 3px; height: 3px; }
+.particle:nth-child(8)  { left: 80%; animation-duration: 13s; animation-delay: 2.5s;  width: 4px; height: 4px; opacity: 0.4; }
+.particle:nth-child(9)  { left: 88%; animation-duration: 9s;  animation-delay: 0.3s;  width: 3px; height: 3px; }
+.particle:nth-child(10) { left: 22%; animation-duration: 16s; animation-delay: 5s;    width: 6px; height: 6px; opacity: 0.2; background: rgba(78, 207, 216, 0.4); }
+.particle:nth-child(11) { left: 55%; animation-duration: 11s; animation-delay: 3.5s;  width: 3px; height: 3px; }
+.particle:nth-child(12) { left: 92%; animation-duration: 8s;  animation-delay: 1.8s;  width: 4px; height: 4px; opacity: 0.3; }
+
+@keyframes particleRise {
+  0%   { transform: translateY(110vh) scale(0); opacity: 0; }
+  10%  { opacity: 1; transform: translateY(90vh) scale(1); }
+  90%  { opacity: 0.6; }
+  100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+}
+
+/* ===========================================
+   HERO WAVE DIVIDER
+   =========================================== */
+
+.hero__wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  line-height: 0;
+  pointer-events: none;
+}
+
+.hero__wave svg {
+  width: 100%;
+  height: 64px;
+  display: block;
+}
+
+/* ===========================================
+   HOW IT WORKS PATH SVG
+   =========================================== */
+
+.hiw__path-wrap {
+  position: relative;
+  height: 60px;
+  margin-bottom: -20px;
+  overflow: hidden;
+}
+
+.hiw__path-svg {
+  width: 100%;
+  height: 60px;
+  opacity: 0.5;
+}
+
+#hiw-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: stroke-dashoffset 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#hiw-path.draw {
+  stroke-dashoffset: 0;
+}
+
+@media (max-width: 768px) {
+  .hiw__path-wrap { display: none; }
+}

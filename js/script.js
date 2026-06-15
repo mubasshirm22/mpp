@@ -233,3 +233,102 @@ document.querySelectorAll('.why__card, .service-card, .sr-card, .faq__item, .hiw
   el.style.transitionDelay = `${(i % 4) * 55}ms`;
   revealObserver.observe(el);
 });
+
+/* ===========================================
+   SCROLL PROGRESS BAR
+   =========================================== */
+
+const scrollBar = document.getElementById('scroll-progress');
+
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = maxScroll > 0 ? (scrolled / maxScroll) * 100 : 0;
+  scrollBar.style.width = pct + '%';
+}, { passive: true });
+
+/* ===========================================
+   PARALLAX HERO BLOBS
+   =========================================== */
+
+const blob1 = document.querySelector('.hero__blob--1');
+const blob2 = document.querySelector('.hero__blob--2');
+
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (blob1) blob1.style.transform = `translate(0, ${y * 0.25}px) scale(1)`;
+  if (blob2) blob2.style.transform = `translate(0, ${y * -0.15}px) scale(1)`;
+}, { passive: true });
+
+/* ===========================================
+   SVG PATH DRAW ON SCROLL
+   =========================================== */
+
+const hiwPath = document.getElementById('hiw-path');
+
+if (hiwPath) {
+  const pathObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        hiwPath.classList.add('draw');
+        pathObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  pathObserver.observe(hiwPath.closest('.hiw__path-wrap'));
+}
+
+/* ===========================================
+   NUMBER COUNT-UP ANIMATION
+   =========================================== */
+
+function animateCount(el, target, suffix = '', duration = 1400) {
+  const start = performance.now();
+  const update = (now) => {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(ease * target) + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+
+const countObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = el.dataset.suffix || '';
+    animateCount(el, target, suffix);
+    countObserver.unobserve(el);
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-count]').forEach(el => countObserver.observe(el));
+
+/* ===========================================
+   STAGGER REVEAL ON SCROLL (enhanced)
+   =========================================== */
+
+const staggerObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      staggerObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+document.querySelectorAll('.hiw__step').forEach((el, i) => {
+  el.classList.add('reveal');
+  el.style.transitionDelay = `${i * 120}ms`;
+  staggerObserver.observe(el);
+});
+
+document.querySelectorAll('.team__card').forEach((el, i) => {
+  el.classList.add('reveal');
+  el.style.transitionDelay = `${i * 100}ms`;
+  staggerObserver.observe(el);
+});
