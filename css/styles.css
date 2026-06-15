@@ -1960,3 +1960,199 @@ em {
 .nav.scrolled .nav__logo-img {
   filter: drop-shadow(0 0 6px rgba(24, 158, 183, 0.3));
 }
+
+/* ===========================================
+   HOW IT WORKS
+   =========================================== */
+
+.how-it-works {
+  background: linear-gradient(180deg, #F8F8F7 0%, #EEF5F8 100%);
+}
+
+.hiw__grid {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.hiw__step {
+  flex: 1;
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  text-align: center;
+  border: 1px solid var(--gray-lt);
+  position: relative;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.hiw__step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(24, 158, 183, 0.12);
+}
+
+.hiw__num {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #189EB7, #1189A3);
+  color: #ffffff;
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 16px rgba(24, 158, 183, 0.35);
+  animation: numGlow 3s ease-in-out infinite;
+}
+
+@keyframes numGlow {
+  0%, 100% { box-shadow: 0 4px 16px rgba(24, 158, 183, 0.35); }
+  50%       { box-shadow: 0 4px 28px rgba(24, 158, 183, 0.65); }
+}
+
+.hiw__step h3 {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.hiw__step p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.65;
+}
+
+.hiw__arrow {
+  width: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sage);
+  opacity: 0.5;
+}
+
+.hiw__arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ===========================================
+   CHIP VARIANTS
+   =========================================== */
+
+/* MCAT chips — teal */
+.chip--mcat span {
+  border-color: rgba(24, 158, 183, 0.35);
+  color: #189EB7;
+  background: rgba(24, 158, 183, 0.06);
+}
+.chip--mcat:hover span {
+  border-color: #189EB7;
+  background: rgba(24, 158, 183, 0.12);
+}
+.chip--mcat input:checked + span {
+  background: #189EB7;
+  border-color: #189EB7;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(24, 158, 183, 0.4);
+}
+
+/* Other / guidance chips — softer purple-ish navy */
+.chip--other span {
+  border-color: rgba(0, 20, 57, 0.2);
+  color: var(--gray);
+  font-style: italic;
+}
+.chip--other:hover span {
+  border-color: var(--navy);
+  color: var(--navy);
+  font-style: normal;
+}
+.chip--other input:checked + span {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #ffffff;
+  font-style: normal;
+}
+
+/* ===========================================
+   FORM EXTRAS
+   =========================================== */
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.55;
+}
+
+.form-optional {
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 0.8125rem;
+}
+
+.form-reassurance {
+  font-size: 0.8125rem;
+  color: var(--gray);
+  text-align: center;
+  margin-top: -4px;
+  margin-bottom: 4px;
+  font-style: italic;
+}
+
+/* ===========================================
+   MORE ANIMATIONS
+   =========================================== */
+
+/* How it works step stagger */
+.hiw__step:nth-child(1) { transition-delay: 0s; }
+.hiw__step:nth-child(3) { transition-delay: 0.08s; }
+.hiw__step:nth-child(5) { transition-delay: 0.16s; }
+
+/* Chip bounce on check */
+.chip input:checked + span {
+  animation: chipBounce 0.35s var(--ease);
+}
+@keyframes chipBounce {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.1); }
+  100% { transform: scale(1.02); }
+}
+
+/* Textarea focus glow */
+.form-textarea:focus {
+  border-color: #189EB7;
+  box-shadow: 0 0 0 3px rgba(24, 158, 183, 0.18);
+}
+
+/* Service main card entrance */
+.service-main--navy, .service-main--sage {
+  animation: fadeSlideUp 0.6s var(--ease) both;
+}
+.service-main--sage { animation-delay: 0.12s; }
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive hiw */
+@media (max-width: 768px) {
+  .hiw__grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .hiw__arrow {
+    transform: rotate(90deg);
+    width: auto;
+    height: 28px;
+  }
+  .hiw__step { width: 100%; }
+}

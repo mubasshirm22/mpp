@@ -87,8 +87,8 @@
           </div>
           <div class="why__card">
             <div class="why__num">02</div>
-            <h3>Honest, not just encouraging</h3>
-            <p>We'll tell you what's not working and actually help fix it, not just say it looks great.</p>
+            <h3>Proven track record</h3>
+            <p>Cumulatively tutored 50+ students privately, written essays, built school lists, and gotten accepted to competitive research programs and medical school.</p>
           </div>
           <div class="why__card">
             <div class="why__num">03</div>
@@ -99,6 +99,39 @@
             <div class="why__num">04</div>
             <h3>Individualized tutoring</h3>
             <p>One-on-one sessions built around you, not group classes or generic advice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
+    <section class="section how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h2>How it works</h2>
+          <p class="section-sub">Simple, personal, no fluff.</p>
+        </div>
+        <div class="hiw__grid">
+          <div class="hiw__step reveal">
+            <div class="hiw__num">1</div>
+            <h3>Book a free consult</h3>
+            <p>Fill out the form. We reach out within 24 hours to learn what you need.</p>
+          </div>
+          <div class="hiw__arrow" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+          <div class="hiw__step reveal">
+            <div class="hiw__num">2</div>
+            <h3>Get matched</h3>
+            <p>You get paired with someone who scored highly in your specific section or area. Not random.</p>
+          </div>
+          <div class="hiw__arrow" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+          <div class="hiw__step reveal">
+            <div class="hiw__num">3</div>
+            <h3>Start working</h3>
+            <p>Sessions built around your schedule, your weaknesses, and your goals. Pay only for what you use.</p>
           </div>
         </div>
       </div>
@@ -197,7 +230,7 @@
               <div class="team__avatar team__avatar--1">MM</div>
             </div>
             <div class="team__info">
-              <h3 class="team__name">Mubasshir Mumtaz</h3>
+              <h3 class="team__name">Mubasshir</h3>
               <p class="team__role">Co-founder</p>
               <p class="team__degree">B.S. Computer Science &amp; Biology</p>
               <p class="team__score">98th percentile CARS &middot; 98th percentile P/S</p>
@@ -209,7 +242,7 @@
               <div class="team__avatar team__avatar--2">SS</div>
             </div>
             <div class="team__info">
-              <h3 class="team__name">Shayaan Satti</h3>
+              <h3 class="team__name">Shayaan</h3>
               <p class="team__role">Co-founder</p>
               <p class="team__degree">B.S. Biology</p>
               <p class="team__score">99th percentile P/S &middot; 99th percentile C/P</p>
@@ -221,7 +254,7 @@
               <div class="team__avatar team__avatar--3">RS</div>
             </div>
             <div class="team__info">
-              <h3 class="team__name">Raiyan Satti</h3>
+              <h3 class="team__name">Raiyan</h3>
               <p class="team__role">Co-founder</p>
               <p class="team__degree">B.S. Biology</p>
               <p class="team__score">99th percentile C/P &middot; 100th percentile B/B</p>
@@ -296,7 +329,7 @@
               <span class="faq__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
             </button>
             <div class="faq__a"><div class="faq__a-inner">
-              <p>Remote via video call, scheduled around your availability. You'll always work with the same person.</p>
+              <p>Remote via video call, scheduled around your availability. We match you with someone based on what you need help with.</p>
             </div></div>
           </div>
 
@@ -367,7 +400,7 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <div class="container"><p>&copy; 2025 MedPathPrep. All rights reserved.</p></div>
+      <div class="container"><p>&copy; 2026 MedPathPrep. All rights reserved.</p></div>
     </div>
   </footer>
 
@@ -396,14 +429,14 @@
         >
           <!-- Name -->
           <div class="form-field">
-            <label class="form-label" for="f-name">Name <span class="form-req" aria-hidden="true">*</span></label>
+            <label class="form-label" for="f-name">First name <span class="form-req" aria-hidden="true">*</span></label>
             <input
               class="form-input"
               type="text"
               id="f-name"
               name="name"
-              placeholder="Your name"
-              autocomplete="name"
+              placeholder="First name"
+              autocomplete="given-name"
               required
             />
             <span class="form-error" id="err-name" role="alert" aria-live="polite"></span>
@@ -411,29 +444,29 @@
 
           <!-- Email -->
           <div class="form-field">
-            <label class="form-label" for="f-email">Email</label>
+            <label class="form-label" for="f-email">Best email</label>
             <input
               class="form-input"
               type="email"
               id="f-email"
               name="email"
-              placeholder="you@email.com"
+              placeholder="Best email"
               autocomplete="email"
             />
           </div>
 
           <!-- Phone -->
           <div class="form-field">
-            <label class="form-label" for="f-phone">Phone</label>
+            <label class="form-label" for="f-phone">Phone number (optional)</label>
             <input
               class="form-input"
               type="tel"
               id="f-phone"
               name="phone"
-              placeholder="(555) 000-0000"
+              placeholder="Phone number"
               autocomplete="tel"
             />
-            <span class="form-hint">Provide at least one: email or phone.</span>
+            <span class="form-hint">Leave either your email or phone so we can reach you.</span>
             <span class="form-error" id="err-contact" role="alert" aria-live="polite"></span>
           </div>
 
@@ -441,20 +474,38 @@
           <div class="form-field">
             <label class="form-label">What do you need help with?</label>
             <div class="chips" role="group" aria-label="Select services">
-              <label class="chip"><input type="checkbox" name="services" value="MCAT Tutoring" /><span>MCAT Tutoring</span></label>
-              <label class="chip"><input type="checkbox" name="services" value="MCAT CARS" /><span>MCAT CARS</span></label>
+              <label class="chip chip--mcat"><input type="checkbox" name="services" value="MCAT Tutoring" /><span>MCAT Tutoring</span></label>
+              <label class="chip chip--mcat"><input type="checkbox" name="services" value="MCAT C/P" /><span>MCAT C/P</span></label>
+              <label class="chip chip--mcat"><input type="checkbox" name="services" value="MCAT CARS" /><span>MCAT CARS</span></label>
+              <label class="chip chip--mcat"><input type="checkbox" name="services" value="MCAT B/B" /><span>MCAT B/B</span></label>
+              <label class="chip chip--mcat"><input type="checkbox" name="services" value="MCAT P/S" /><span>MCAT P/S</span></label>
               <label class="chip"><input type="checkbox" name="services" value="Personal Statement" /><span>Personal Statement</span></label>
               <label class="chip"><input type="checkbox" name="services" value="Activities Section" /><span>Activities Section</span></label>
               <label class="chip"><input type="checkbox" name="services" value="Secondary Essays" /><span>Secondary Essays</span></label>
               <label class="chip"><input type="checkbox" name="services" value="School List" /><span>School List</span></label>
               <label class="chip"><input type="checkbox" name="services" value="Interview Prep" /><span>Interview Prep</span></label>
               <label class="chip"><input type="checkbox" name="services" value="General Advising" /><span>General Advising</span></label>
-              <label class="chip"><input type="checkbox" name="services" value="Not sure yet" /><span>Not sure yet</span></label>
+              <label class="chip chip--other"><input type="checkbox" name="services" value="I just have questions" /><span>I just have questions</span></label>
+              <label class="chip chip--other"><input type="checkbox" name="services" value="Not sure, just need guidance" /><span>Not sure, just need guidance</span></label>
             </div>
           </div>
 
+          <!-- Anything else -->
+          <div class="form-field">
+            <label class="form-label" for="f-notes">Anything you want us to know <span class="form-optional">(optional)</span></label>
+            <textarea
+              class="form-input form-textarea"
+              id="f-notes"
+              name="notes"
+              rows="3"
+              placeholder='e.g. "I&apos;m taking the MCAT in August and I&apos;m lost on CARS" or "I need help with my personal statement."'
+            ></textarea>
+          </div>
+
+          <p class="form-reassurance">No commitment. We'll just reach out and see what you need.</p>
+
           <button type="submit" class="btn btn--primary btn--lg btn--full" id="submit-btn">
-            <span id="submit-label">Send Request</span>
+            <span id="submit-label">Get Free Advice</span>
             <span id="submit-loading" hidden>Sending&hellip;</span>
           </button>
 
